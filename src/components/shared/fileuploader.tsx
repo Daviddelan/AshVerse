@@ -1,14 +1,13 @@
-import React, {useCallback, useState} from 'react'
+import {useCallback, useState} from 'react'
 import { FileWithPath, useDropzone } from 'react-dropzone'
 import { Button } from '../ui/button'
-import { set } from 'react-hook-form'
 
 type FileUploaderProps = {
     fieldChange: (file: FileWithPath[]) => void
     mediaUrl: string
 }
 
-const FileUploader = ( {fieldChange, mediaUrl} : FileUploaderProps) => {
+const FileUploader = ( {fieldChange} : FileUploaderProps) => {
     const [file, setFile] = useState<File[]> ([])
     const [fileUrl, setFileUrl] = useState('')
     

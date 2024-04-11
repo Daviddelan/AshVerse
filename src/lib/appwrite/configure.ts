@@ -128,6 +128,7 @@ class AppwriteService {
         try {
             const promise = databases.listDocuments(appwriteConfig.databaseId, appwriteConfig.userCollectionId);
             const response = await promise;
+            console.log(userId)
             return response.documents;
         } catch (error) {
             console.error('Failed to fetch user details:', error);
